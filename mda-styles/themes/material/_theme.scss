@@ -3,7 +3,7 @@
 @include mat.core();
 
 // Define a light theme
-$light-primary: mat.define-palette(mat.$indigo-palette);
+$light-primary: mat.define-palette(mat.$indigo-palette, 900);
 $light-accent: mat.define-palette(mat.$pink-palette);
 $light-theme: mat.define-light-theme((
   color: (
@@ -22,10 +22,9 @@ $dark-theme: mat.define-dark-theme((
   )
 ));
 
-@include mat.core-theme($dark-theme);
-@include mat.button-theme($dark-theme);
+@include mat.all-component-themes($light-theme);
 
-.my-light-theme {
-  @include mat.core-color($light-theme);
-  @include mat.button-color($light-theme);
+.dark-theme {
+  // This mixin only generates the color styles now.
+  @include mat.all-component-colors($dark-theme);
 }

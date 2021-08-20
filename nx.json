@@ -40,9 +40,11 @@
       "tags": [],
       "implicitDependencies": ["frontend-client"]
     },
-    "frontend/admin-e2e": {
+    "frontend-admin-e2e": {
       "tags": [],
-      "implicitDependencies": ["frontend-admin"]
+      "implicitDependencies": [
+        "frontend-admin"
+      ]
     },
     "ui-component": {
       "tags": ["scope:ui-lib", "type:lib"]

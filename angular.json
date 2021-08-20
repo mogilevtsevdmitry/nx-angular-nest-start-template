@@ -8,7 +8,6 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/backend/api",
             "main": "apps/backend/api/src/main.ts",
@@ -43,7 +42,6 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/backend/api"],
           "options": {
             "jestConfig": "apps/backend/api/jest.config.js",
             "passWithNoTests": true
@@ -59,7 +57,6 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/frontend/admin",
             "index": "apps/frontend/admin/src/index.html",
@@ -138,7 +135,6 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/frontend/admin"],
           "options": {
             "jestConfig": "apps/frontend/admin/jest.config.js",
             "passWithNoTests": true
@@ -154,7 +150,6 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/frontend/client",
             "index": "apps/frontend/client/src/index.html",
@@ -236,7 +231,6 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/frontend/client"],
           "options": {
             "jestConfig": "apps/frontend/client/jest.config.js",
             "passWithNoTests": true
@@ -270,7 +264,7 @@
         }
       }
     },
-    "frontend/admin-e2e": {
+    "frontend-admin-e2e": {
       "root": "apps/frontend/admin-e2e",
       "sourceRoot": "apps/frontend/admin-e2e/src",
       "projectType": "application",
@@ -304,7 +298,6 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ui-component"],
           "options": {
             "jestConfig": "libs/ui-component/jest.config.js",
             "passWithNoTests": true
