@@ -334,6 +334,46 @@
         }
       }
     },
+    "shared-feature": {
+      "root": "libs/shared/feature",
+      "sourceRoot": "libs/shared/feature/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/shared/feature",
+            "tsConfig": "libs/shared/feature/tsconfig.lib.json",
+            "packageJson": "libs/shared/feature/package.json",
+            "main": "libs/shared/feature/src/index.ts",
+            "assets": [
+              "libs/shared/feature/*.md"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/feature/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/feature"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "shared-feature-feature": {
       "root": "libs/shared/feature/feature",
       "sourceRoot": "libs/shared/feature/feature/src",
@@ -374,6 +414,46 @@
         }
       }
     },
+    "shared-ui": {
+      "root": "libs/shared/ui",
+      "sourceRoot": "libs/shared/ui/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/shared/ui",
+            "tsConfig": "libs/shared/ui/tsconfig.lib.json",
+            "packageJson": "libs/shared/ui/package.json",
+            "main": "libs/shared/ui/src/index.ts",
+            "assets": [
+              "libs/shared/ui/*.md"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "shared-ui-ui": {
       "root": "libs/shared/ui/ui",
       "sourceRoot": "libs/shared/ui/ui/src",
@@ -409,6 +489,46 @@
           ],
           "options": {
             "jestConfig": "libs/shared/ui/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-utility": {
+      "root": "libs/shared/utility",
+      "sourceRoot": "libs/shared/utility/src",
+      "projectType": "library",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/libs/shared/utility",
+            "tsConfig": "libs/shared/utility/tsconfig.lib.json",
+            "packageJson": "libs/shared/utility/package.json",
+            "main": "libs/shared/utility/src/index.ts",
+            "assets": [
+              "libs/shared/utility/*.md"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/utility/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/utility"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/utility/jest.config.js",
             "passWithNoTests": true
           }
         }

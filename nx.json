@@ -55,16 +55,11 @@
       ]
     },
     "shared-data-access-interfaces": {
-      "tags": []
-    },
-    "shared-feature-feature": {
-      "tags": []
-    },
-    "shared-ui-ui": {
-      "tags": []
-    },
-    "shared-utility-utility": {
-      "tags": []
+      "tags": [
+        "scope:shared",
+        "type:lib",
+        "lib-type:data-access"
+      ]
     },
     "ui-component": {
       "tags": [
