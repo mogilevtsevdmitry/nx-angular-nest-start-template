@@ -31,14 +31,10 @@
       "tags": []
     },
     "frontend-admin": {
-      "tags": ["scope:frontend-admin", "type:app"]
-    },
-    "frontend-client": {
-      "tags": ["scope:frontend-client", "type:app"]
-    },
-    "frontend-client-e2e": {
-      "tags": [],
-      "implicitDependencies": ["frontend-client"]
+      "tags": [
+        "scope:frontend-admin",
+        "type:app"
+      ]
     },
     "frontend-admin-e2e": {
       "tags": [],
@@ -46,8 +42,35 @@
         "frontend-admin"
       ]
     },
+    "frontend-client": {
+      "tags": [
+        "scope:frontend-client",
+        "type:app"
+      ]
+    },
+    "frontend-client-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "frontend-client"
+      ]
+    },
+    "shared-data-access-interfaces": {
+      "tags": []
+    },
+    "shared-feature-feature": {
+      "tags": []
+    },
+    "shared-ui-ui": {
+      "tags": []
+    },
+    "shared-utility-utility": {
+      "tags": []
+    },
     "ui-component": {
-      "tags": ["scope:ui-lib", "type:lib"]
+      "tags": [
+        "scope:ui-lib",
+        "type:lib"
+      ]
     }
   }
 }

@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
+import { GraphQLModule } from '@nestjs/graphql';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppController } from './app.controller';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { environment } from '../environments/environment';
-import { GraphQLModule } from '@nestjs/graphql';
 import { AppResolver } from './app.resolver';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -15,7 +16,8 @@ import { AppResolver } from './app.resolver';
       typePaths: ['./**/*.graphql'],
       context: ({ req }) => ({ req }),
       playground: true
-    })
+    }),
+    UsersModule
   ],
   controllers: [AppController],
   providers: [AppResolver]
