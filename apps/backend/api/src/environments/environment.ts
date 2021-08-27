@@ -10,6 +10,7 @@ export const environment = {
     dropSchema: false,
     synchronize: true,
     logging: true,
+    autoLoadEntities: true,
     entities: [
       'dist/apps/backend/api/src/**/*.entity{.ts, .js}',
     ],
@@ -17,7 +18,7 @@ export const environment = {
       'dist/apps/backend/api/migrations/*{.ts, .js}',
     ],
     cli: {
-      'migrationsDir': 'db/migrations'
-    }
+      'migrationsDir': 'db/migrations',
+    },
   }
 };

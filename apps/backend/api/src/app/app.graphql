@@ -1,3 +1,2 @@
-type Query {
-  test: String
-}
+scalar JSON
+scalar Upload
