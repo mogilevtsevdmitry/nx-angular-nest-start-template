@@ -3,10 +3,10 @@ extend type Query {
 }
 
 type User {
-  id: ID!
-  email: String!
-  password: String!
-  createdAt: Date!
-  updatedAt: Date!
+  id: ID
+  email: String
+  password: String
+  createdAt: Date
+  updatedAt: Date
 }
 

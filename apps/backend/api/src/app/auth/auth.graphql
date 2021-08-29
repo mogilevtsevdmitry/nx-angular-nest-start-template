@@ -3,6 +3,10 @@ extend type Query {
   logout: Boolean
 }
 
+type Mutation {
+  register(email: String!, password: String!): User
+}
+
 type SignInResponse {
   id: ID
   access_token: String

@@ -1,26 +1,33 @@
-import { Module } from '@nestjs/common';
-import { GraphQLModule } from '@nestjs/graphql';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { Module } from '@nestjs/common'
+import { GraphQLModule } from '@nestjs/graphql'
+import { TypeOrmModule } from '@nestjs/typeorm'
+import GraphQLJSON from 'graphql-type-json'
 
-import { AppController } from './app.controller';
-import { environment } from '../environments/environment';
-import { AppResolver } from './app.resolver';
-import { UsersModule } from './users/users.module';
+import { environment } from '../environments/environment'
+import { UsersModule } from './users/users.module'
+import { AppController } from './app.controller'
+import { AuthModule } from './auth/auth.module'
+import { DateScalar } from './app.resolver'
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      ...environment.connection
+      ...environment.connection,
     }),
     GraphQLModule.forRoot({
       typePaths: ['./**/*.graphql'],
       context: ({ req }) => ({ req }),
-      playground: true
+      playground: true,
+      debug: true,
+      resolvers: [
+        { JSON: GraphQLJSON },
+      ],
     }),
-    UsersModule
+    UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
-  providers: [AppResolver]
+  providers: [DateScalar],
 })
 export class AppModule {
 }

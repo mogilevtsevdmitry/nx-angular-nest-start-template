@@ -1,4 +1,8 @@
 export const environment = {
+  jwt: {
+    secret: process.env.JWT_SECRET,
+    expiresIn: 3600,
+  },
   production: false,
   connection: {
     type: process.env.DB_TYPE as 'aurora-data-api',
@@ -20,5 +24,5 @@ export const environment = {
     cli: {
       'migrationsDir': 'db/migrations',
     },
-  }
-};
+  },
+}

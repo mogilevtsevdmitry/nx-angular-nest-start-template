@@ -2,7 +2,8 @@ import { InjectRepository } from '@nestjs/typeorm'
 import { Injectable } from '@angular/core'
 import { Repository } from 'typeorm'
 
-import { UserEntity } from '../entities/user.entity'
+import { AuthHelper } from '../auth/auth.helper'
+import { UserEntity } from './user.entity'
 
 @Injectable()
 export class UserService {
@@ -25,7 +26,9 @@ export class UserService {
   }
 
   async create(user: Partial<UserEntity>): Promise<UserEntity> {
-    const newUser = await this.userRepo.create(user)
+    const email = user.email.toLocaleLowerCase().trim()
+    const password = await AuthHelper.hash(user.password)
+    const newUser = await this.userRepo.create({ ...user, email, password })
     return await this.userRepo.save(newUser)
   }
 
