@@ -1,7 +1,7 @@
 export const environment = {
   jwt: {
     secret: process.env.JWT_SECRET,
-    expiresIn: 3600,
+    expiresIn: Number(process.env.JWT_IXPIRESIN),
   },
   production: false,
   connection: {

@@ -17,18 +17,7 @@
     "paths": {
       "@mda/shared/data-access/interfaces": [
         "libs/shared/data-access/interfaces/src/index.ts"
-      ],
-      "@mda/shared/feature": ["libs/shared/feature/src/index.ts"],
-      "@mda/shared/feature/feature": [
-        "libs/shared/feature/feature/src/index.ts"
-      ],
-      "@mda/shared/ui": ["libs/shared/ui/src/index.ts"],
-      "@mda/shared/ui/ui": ["libs/shared/ui/ui/src/index.ts"],
-      "@mda/shared/utility": ["libs/shared/utility/src/index.ts"],
-      "@mda/shared/utility/utility": [
-        "libs/shared/utility/utility/src/index.ts"
-      ],
-      "@mda/ui-component": ["libs/ui-component/src/index.ts"]
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

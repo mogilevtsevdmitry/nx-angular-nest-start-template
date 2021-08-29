@@ -35,6 +35,14 @@
                 ]
               },
               {
+                "sourceTag": "scope:backend-api",
+                "onlyDependOnLibsWithTags": [
+                  "scope:backend-api",
+                  "type:lib",
+                  "scope:shared"
+                ]
+              },
+              {
                 "sourceTag": "lib-type:feature",
                 "onlyDependOnLibsWithTags": [
                   "lib-type:feature",

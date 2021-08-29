@@ -12,7 +12,8 @@ import { JwtStrategy } from './jwt.strategy'
 
 @Module({
   imports: [
-    UsersModule, PassportModule,
+    UsersModule,
+    PassportModule,
     JwtModule.register({
       privateKey: environment.jwt.secret,
       signOptions: {
