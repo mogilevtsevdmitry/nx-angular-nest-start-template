@@ -163,9 +163,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/frontend/admin-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/frontend/admin-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -287,9 +285,7 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/frontend/client-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/frontend/client-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -301,32 +297,24 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/shared/data-access/interfaces",
             "tsConfig": "libs/shared/data-access/interfaces/tsconfig.lib.json",
             "packageJson": "libs/shared/data-access/interfaces/package.json",
             "main": "libs/shared/data-access/interfaces/src/index.ts",
-            "assets": [
-              "libs/shared/data-access/interfaces/*.md"
-            ]
+            "assets": ["libs/shared/data-access/interfaces/*.md"]
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/shared/data-access/interfaces/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/shared/data-access/interfaces/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/data-access/interfaces"
-          ],
+          "outputs": ["coverage/libs/shared/data-access/interfaces"],
           "options": {
             "jestConfig": "libs/shared/data-access/interfaces/jest.config.js",
             "passWithNoTests": true
@@ -341,32 +329,24 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/shared/feature",
             "tsConfig": "libs/shared/feature/tsconfig.lib.json",
             "packageJson": "libs/shared/feature/package.json",
             "main": "libs/shared/feature/src/index.ts",
-            "assets": [
-              "libs/shared/feature/*.md"
-            ]
+            "assets": ["libs/shared/feature/*.md"]
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/shared/feature/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/shared/feature/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/feature"
-          ],
+          "outputs": ["coverage/libs/shared/feature"],
           "options": {
             "jestConfig": "libs/shared/feature/jest.config.js",
             "passWithNoTests": true
@@ -381,32 +361,24 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/shared/feature/feature",
             "tsConfig": "libs/shared/feature/feature/tsconfig.lib.json",
             "packageJson": "libs/shared/feature/feature/package.json",
             "main": "libs/shared/feature/feature/src/index.ts",
-            "assets": [
-              "libs/shared/feature/feature/*.md"
-            ]
+            "assets": ["libs/shared/feature/feature/*.md"]
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/shared/feature/feature/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/shared/feature/feature/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/feature/feature"
-          ],
+          "outputs": ["coverage/libs/shared/feature/feature"],
           "options": {
             "jestConfig": "libs/shared/feature/feature/jest.config.js",
             "passWithNoTests": true
@@ -421,32 +393,24 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/shared/ui",
             "tsConfig": "libs/shared/ui/tsconfig.lib.json",
             "packageJson": "libs/shared/ui/package.json",
             "main": "libs/shared/ui/src/index.ts",
-            "assets": [
-              "libs/shared/ui/*.md"
-            ]
+            "assets": ["libs/shared/ui/*.md"]
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/shared/ui/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/shared/ui/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui"
-          ],
+          "outputs": ["coverage/libs/shared/ui"],
           "options": {
             "jestConfig": "libs/shared/ui/jest.config.js",
             "passWithNoTests": true
@@ -461,32 +425,24 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/shared/ui/ui",
             "tsConfig": "libs/shared/ui/ui/tsconfig.lib.json",
             "packageJson": "libs/shared/ui/ui/package.json",
             "main": "libs/shared/ui/ui/src/index.ts",
-            "assets": [
-              "libs/shared/ui/ui/*.md"
-            ]
+            "assets": ["libs/shared/ui/ui/*.md"]
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/shared/ui/ui/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/shared/ui/ui/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/ui/ui"
-          ],
+          "outputs": ["coverage/libs/shared/ui/ui"],
           "options": {
             "jestConfig": "libs/shared/ui/ui/jest.config.js",
             "passWithNoTests": true
@@ -501,32 +457,24 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/shared/utility",
             "tsConfig": "libs/shared/utility/tsconfig.lib.json",
             "packageJson": "libs/shared/utility/package.json",
             "main": "libs/shared/utility/src/index.ts",
-            "assets": [
-              "libs/shared/utility/*.md"
-            ]
+            "assets": ["libs/shared/utility/*.md"]
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/shared/utility/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/shared/utility/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/utility"
-          ],
+          "outputs": ["coverage/libs/shared/utility"],
           "options": {
             "jestConfig": "libs/shared/utility/jest.config.js",
             "passWithNoTests": true
@@ -541,32 +489,24 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/shared/utility/utility",
             "tsConfig": "libs/shared/utility/utility/tsconfig.lib.json",
             "packageJson": "libs/shared/utility/utility/package.json",
             "main": "libs/shared/utility/utility/src/index.ts",
-            "assets": [
-              "libs/shared/utility/utility/*.md"
-            ]
+            "assets": ["libs/shared/utility/utility/*.md"]
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/shared/utility/utility/**/*.ts"
-            ]
+            "lintFilePatterns": ["libs/shared/utility/utility/**/*.ts"]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/shared/utility/utility"
-          ],
+          "outputs": ["coverage/libs/shared/utility/utility"],
           "options": {
             "jestConfig": "libs/shared/utility/utility/jest.config.js",
             "passWithNoTests": true
