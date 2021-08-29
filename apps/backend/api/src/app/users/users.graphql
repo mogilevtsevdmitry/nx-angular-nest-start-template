@@ -1,4 +1,4 @@
-type Query {
+extend type Query {
   user(id: ID!): User
 }
 
@@ -10,4 +10,3 @@ type User {
   updatedAt: Date!
 }
 
-scalar Date
